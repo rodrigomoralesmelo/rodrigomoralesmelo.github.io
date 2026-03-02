@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Msc. Rodrigo H. Morales M. | Docente de Ingeniería Civil Eléctrica</title>
+    <!-- Tailwind CSS para estilos rápidos y modernos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a', // Azul oscuro académico
+                        secondary: '#3b82f6', // Azul claro
+                        accent: '#f59e0b', // Naranja/Dorado para destacar
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Estilos personalizados adicionales */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .nav-link:hover { color: #3b82f6; transition: color 0.3s ease; }
+    </style>
+</head>
+<body class="bg-slate-50 text-gray-800 font-sans antialiased">
+
+    <!-- Navegación Fija -->
+    <nav class="fixed w-full z-50 glass-card transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 font-bold text-primary text-xl tracking-tight">
+                    <i class="fa-solid fa-bolt text-accent mr-2"></i> RHM
+                </div>
+                <!-- Menú Desktop -->
+                <div class="hidden md:flex space-x-6 text-sm font-semibold">
+                    <a href="#inicio" class="nav-link text-gray-700">Inicio</a>
+                    <a href="#ensenanza" class="nav-link text-gray-700">Enseñanza</a>
+                    <a href="#publicaciones" class="nav-link text-gray-700">Publicaciones</a>
+                    <a href="#tesis" class="nav-link text-gray-700">Tesis</a>
+                    <a href="#repositorios" class="nav-link text-primary font-bold"><i class="fa-brands fa-github mr-1"></i>Código</a>
+                </div>
+                <!-- Menú Móvil (Botón) -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-primary focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Menú Móvil (Desplegable) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 pb-4">
+            <a href="#inicio" class="block px-4 py-2 text-gray-700 hover:bg-gray-50">Inicio</a>
+            <a href="#ensenanza" class="block px-4 py-2 text-gray-700 hover:bg-gray-50">Enseñanza</a>
+            <a href="#publicaciones" class="block px-4 py-2 text-gray-700 hover:bg-gray-50">Publicaciones</a>
+            <a href="#tesis" class="block px-4 py-2 text-gray-700 hover:bg-gray-50">Tesis</a>
+            <a href="#repositorios" class="block px-4 py-2 text-primary font-bold hover:bg-gray-50">Código</a>
+        </div>
+    </nav>
+
+    <!-- Sección Hero (Inicio) -->
+    <section id="inicio" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/3 flex justify-center">
+            <div class="w-64 h-64 rounded-full border-4 border-white shadow-xl overflow-hidden bg-gray-200 flex items-center justify-center relative">
+                <!-- Se recomienda cambiar este div por una etiqueta <img> real -->
+                <span class="text-gray-500 text-sm text-center px-4">[Imagen de Rodrigo Morales]</span>
+            </div>
+        </div>
+        <div class="md:w-2/3 text-center md:text-left">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+                Msc. Rodrigo H. Morales M.
+            </h1>
+            <h2 class="text-2xl text-secondary font-medium mb-6">Docente e Investigador en Ingeniería Civil Eléctrica</h2>
+            <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                Especialista en sistemas eléctricos, electrónica y control. Apasionado por la enseñanza universitaria y la investigación en energías renovables (paneles fotovoltaicos, algoritmos MPPT) e inteligencia computacional.
+            </p>
+            <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                <a href="#repositorios" class="bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition shadow-lg flex items-center gap-2">
+                    <i class="fa-brands fa-github text-xl"></i> Ver Repositorios
+                </a>
+                <a href="mailto:rodrigo.moralesmelo@ulagos.cl" class="bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50 transition shadow flex items-center gap-2">
+                    <i class="fa-solid fa-envelope text-primary"></i> Contactar
+                </a>
+                <a href="https://www.instagram.com/ice_ulagos/" target="_blank" class="bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50 transition shadow flex items-center gap-2">
+                    <i class="fa-brands fa-instagram text-pink-600"></i> @ice_ulagos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Repositorios / Código (NUEVA - Destacada para Alumnos) -->
+    <section id="repositorios" class="py-20 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4"><i class="fa-solid fa-code text-accent mr-3"></i>Repositorios y Código para Alumnos</h2>
+                <p class="text-blue-100 max-w-2xl mx-auto">Material práctico, scripts de MATLAB/Simulink y códigos de microcontroladores utilizados en mis asignaturas.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Tarjeta Repositorio 1 (Ejemplo) -->
+                <div class="bg-white/10 border border-white/20 rounded-xl p-6 hover:bg-white/20 transition cursor-pointer">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-white"><i class="fa-regular fa-folder-open mr-2 text-accent"></i>Simulacion-Potencia</h3>
+                        <span class="bg-accent/20 text-accent text-xs px-2 py-1 rounded">MATLAB</span>
+                    </div>
+                    <p class="text-blue-100 text-sm mb-4">Scripts para la asignatura de Máquinas Eléctricas. Simulaciones de transformadores y motores de inducción.</p>
+                    <a href="#" class="text-white font-medium hover:text-accent flex items-center text-sm">
+                        Ver en GitHub <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Tarjeta Repositorio 2 (Ejemplo) -->
+                <div class="bg-white/10 border border-white/20 rounded-xl p-6 hover:bg-white/20 transition cursor-pointer">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-white"><i class="fa-regular fa-folder-open mr-2 text-accent"></i>Control-PID-Arduino</h3>
+                        <span class="bg-blue-500/20 text-blue-300 text-xs px-2 py-1 rounded">C++ / Arduino</span>
+                    </div>
+                    <p class="text-blue-100 text-sm mb-4">Laboratorio de Microcontroladores: Implementación de un controlador PID digital en placa Arduino Uno.</p>
+                    <a href="#" class="text-white font-medium hover:text-accent flex items-center text-sm">
+                        Ver en GitHub <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Tarjeta Material de Apoyo -->
+                <div class="bg-white/10 border border-white/20 rounded-xl p-6">
+                    <h3 class="text-xl font-bold text-white mb-4"><i class="fa-solid fa-link mr-2 text-accent"></i>Material de Apoyo Externo</h3>
+                    <ul class="space-y-3 text-sm text-blue-100">
+                        <li>
+                            <a href="https://la.mathworks.com/videos/livestream-interactive-tutorial-to-learn-simulink-from-scratch-1725661897274.html?s_tid=srchtitle" target="_blank" class="hover:text-white flex items-center">
+                                <i class="fa-solid fa-play-circle mr-2"></i> Tutorial Aprender Simulink
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.mathworks.com/content/dam/mathworks/fact-sheet/matlab-basic-functions-reference.pdf" target="_blank" class="hover:text-white flex items-center">
+                                <i class="fa-solid fa-file-pdf mr-2"></i> MATLAB Basic Functions Reference
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Enseñanza -->
+    <section id="ensenanza" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Experiencia Docente</h2>
+            
+            <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-gray-300 before:to-transparent">
+                
+                <!-- Experiencia 1 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-secondary text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                        <i class="fa-solid fa-university text-sm"></i>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-card p-6 rounded-xl">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="font-bold text-xl text-gray-900">Universidad de los Lagos</h3>
+                            <span class="text-sm font-semibold text-secondary">2024 - Presente</span>
+                        </div>
+                        <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
+                            <li>Teoría de Circuitos II</li>
+                            <li>Análisis de Señales</li>
+                            <li>Máquinas Eléctricas</li>
+                            <li>Electrónica General</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experiencia 2 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-primary text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                        <i class="fa-solid fa-chalkboard-teacher text-sm"></i>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-card p-6 rounded-xl">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="font-bold text-xl text-gray-900">Universidad de Concepción & INACAP</h3>
+                            <span class="text-sm font-semibold text-primary">2022</span>
+                        </div>
+                        <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
+                            <li>Electrónica General (UdeC)</li>
+                            <li>Máquinas Eléctricas (UdeC)</li>
+                            <li>Sistemas de Control para la Automatización (INACAP)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experiencia 3 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-gray-600 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                        <i class="fa-solid fa-book-open text-sm"></i>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-card p-6 rounded-xl">
+                        <div class="flex items-center justify-between mb-2">
+                            <h3 class="font-bold text-xl text-gray-900">Universidad del Bío-Bío</h3>
+                            <span class="text-sm font-semibold text-gray-600">2018 - 2022</span>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-2">Amplia experiencia dictando laboratorios y cátedras:</p>
+                        <ul class="list-disc list-inside text-gray-600 text-sm space-y-1 grid grid-cols-1 sm:grid-cols-2 gap-x-2">
+                            <li>Teoría de Circuitos II</li>
+                            <li>Señales y Sistemas</li>
+                            <li>Arquitectura de Computadores</li>
+                            <li>Dispositivos Electrónicos</li>
+                            <li>Lab. de Medidas y Electrónica</li>
+                            <li>Lab. de Control y Microcontroladores</li>
+                            <li>Procesamiento Digital de Señales</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Publicaciones e Investigación -->
+    <section id="publicaciones" class="py-20 bg-slate-50 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Publicaciones Científicas</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Investigación enfocada en el control de conversores de potencia y algoritmos de optimización para energías renovables.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Articulo 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-blue-100 p-3 rounded-lg text-primary"><i class="fa-solid fa-file-lines text-xl"></i></div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-2">Extended Operating Region Algorithm for PV Array Connected to Microgrids for Wide Frequency and Amplitude Variations</h4>
+                            <p class="text-sm text-gray-500 mb-3">Publicado en conferencias/revistas de Energía Eléctrica y Fotovoltaica.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Articulo 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-blue-100 p-3 rounded-lg text-primary"><i class="fa-solid fa-file-lines text-xl"></i></div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-2">A Novel Global Maximum Power Point Tracking Method Based on Measurement Cells</h4>
+                            <p class="text-sm text-gray-500 mb-3">Publicado en IEEE Access.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Articulo 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-blue-100 p-3 rounded-lg text-primary"><i class="fa-solid fa-file-lines text-xl"></i></div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-2">PID Control Strategies Comparison with Gain Schedule and States Feedback in a Buck-Boost Converter</h4>
+                            <p class="text-sm text-gray-500 mb-3">Publicado en IEEE ICA ACCA 2018.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Articulo 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-blue-100 p-3 rounded-lg text-primary"><i class="fa-solid fa-file-lines text-xl"></i></div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 mb-2">Comparison between maximum power point tracking algorithms for dc-dc power converters</h4>
+                            <p class="text-sm text-gray-500 mb-3">Publicado en IEEE CHILECON 2017.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Tesis y Premios -->
+    <section id="tesis" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12">
+            
+            <!-- Columna Tesis -->
+            <div>
+                <h2 class="text-3xl font-bold text-gray-900 mb-8"><i class="fa-solid fa-graduation-cap text-secondary mr-3"></i>Trabajos de Tesis</h2>
+                
+                <h3 class="font-bold text-xl text-primary border-b pb-2 mb-4">Mis Tesis</h3>
+                <div class="space-y-4 mb-8">
+                    <div class="bg-gray-50 p-4 rounded-lg border border-gray-100">
+                        <span class="text-xs font-bold text-gray-500 uppercase tracking-wider">Tesis Magíster (U. de Talca)</span>
+                        <p class="font-medium text-gray-800 mt-1">"Método para el seguimiento del punto global de máxima potencia basado en celdas de medición"</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg border border-gray-100">
+                        <span class="text-xs font-bold text-gray-500 uppercase tracking-wider">Tesis Pregrado (UBB)</span>
+                        <p class="font-medium text-gray-800 mt-1">"Estudio de implementación de paneles fotovoltaicos aplicando algoritmos de control de máxima extracción de potencia en la UBB"</p>
+                    </div>
+                </div>
+
+                <h3 class="font-bold text-xl text-primary border-b pb-2 mb-4">Alumnos Tesistas Guiados</h3>
+                <ul class="space-y-3">
+                    <li class="flex items-start gap-3 text-gray-700">
+                        <i class="fa-solid fa-check-circle text-green-500 mt-1"></i>
+                        <div>
+                            <strong>Benjamín Cruz (2025-1)</strong><br>
+                            <span class="text-sm">"Estudio del consumo eléctrico en la U. de los Lagos, Campus Puerto Montt, para diseñar un sistema fotovoltaico".</span>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3 text-gray-700">
+                        <i class="fa-solid fa-check-circle text-green-500 mt-1"></i>
+                        <div>
+                            <strong>Gabriel Cuellar</strong><br>
+                            <span class="text-sm">"Automatización del Control de Nivel..."</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Columna Reconocimientos -->
+            <div>
+                <h2 class="text-3xl font-bold text-gray-900 mb-8"><i class="fa-solid fa-trophy text-accent mr-3"></i>Reconocimientos</h2>
+                <div class="space-y-6">
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 mt-1"><i class="fa-solid fa-medal text-2xl text-accent"></i></div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">1° Congreso de Estudiantes Academia CTCI ULagos</h4>
+                            <p class="text-sm text-gray-500">Octubre 2024</p>
+                            <p class="text-sm text-gray-700 mt-1">Avanzando hacia una cultura de investigación, innovación y creación.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 mt-1"><i class="fa-solid fa-medal text-2xl text-gray-400"></i></div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">1er Lugar Hackathon Nacional & Hackathon Concepción Y4PT</h4>
+                            <p class="text-sm text-gray-500">2017</p>
+                            <p class="text-sm text-gray-700 mt-1">Ganadores con el equipo "AutoHack" desarrollando soluciones para grandes ciudades e ideas como "Interac Tour".</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 mt-1"><i class="fa-solid fa-medal text-2xl text-amber-700"></i></div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Ganadores "DO IT" Concurso de Innovación</h4>
+                            <p class="text-sm text-gray-500">Octubre 2017</p>
+                            <p class="text-sm text-gray-700 mt-1">Proyecto: "Sombrilla de generación y carga de electricidad para dispositivos móviles a partir de tecnología fotovoltaica".</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer / Contacto -->
+    <footer class="bg-gray-900 text-gray-300 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4">Msc. Rodrigo H. Morales M.</h3>
+                <p class="text-sm text-gray-400 mb-4">Docente de Ingeniería Civil Eléctrica, combinando la enseñanza teórica con aplicaciones prácticas y programación.</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4">Contacto Universidad</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><i class="fa-solid fa-envelope mr-2 w-4 text-center"></i> <a href="mailto:rodrigo.moralesmelo@ulagos.cl" class="hover:text-white transition">rodrigo.moralesmelo@ulagos.cl</a></li>
+                    <li><i class="fa-solid fa-phone mr-2 w-4 text-center"></i> +56-65-2493241 (Anexo: 5241)</li>
+                    <li><i class="fa-solid fa-building mr-2 w-4 text-center"></i> Universidad de los Lagos</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4">Enlaces Rápidos</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition text-white">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition text-white">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.instagram.com/ice_ulagos/" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition text-white">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-gray-800 text-sm text-center text-gray-500">
+            &copy; <script>document.write(new Date().getFullYear())</script> Rodrigo H. Morales M. | Desarrollado con HTML, Tailwind CSS y alojado en GitHub Pages.
+        </div>
+    </footer>
+
+    <!-- Script para menú móvil -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Cerrar menú al hacer clic en un enlace (móvil)
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
