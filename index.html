@@ -34,45 +34,57 @@
 </head>
 <body class="bg-slate-50 text-gray-800 font-sans antialiased">
 
-    <!-- Navegación Fija -->
-    <nav class="fixed w-full z-50 glass-card transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16 items-center">
-                <div class="flex-shrink-0 font-bold text-primary text-xl tracking-tight">
-                    <i class="fa-solid fa-bolt text-accent mr-2"></i> RHM
-                </div>
-                <!-- Menú Desktop -->
+<nav class="fixed w-full z-50 glass-card transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="relative flex justify-between h-16 items-center">
+
+            <div class="flex-shrink-0 font-bold text-primary text-xl tracking-tight z-10">
+                <i class="fa-solid fa-bolt text-accent mr-2"></i> RHM
+            </div>
+
+            <div class="absolute left-1/2 -translate-x-1/2 pointer-events-none w-full text-center">
+                <span id="active-section-name"
+                    class="font-bold text-primary uppercase text-[10px] sm:text-xs tracking-[0.2em] transition-all duration-300 opacity-0 transform translate-y-2">
+                    Inicio
+                </span>
+            </div>
+
+            <div class="flex items-center z-10">
                 <div class="hidden md:flex space-x-6 text-sm font-semibold">
                     <a href="#inicio" class="nav-link text-gray-700">Inicio</a>
                     <a href="#ensenanza" class="nav-link text-gray-700">Enseñanza</a>
                     <a href="#publicaciones" class="nav-link text-gray-700">Publicaciones</a>
                     <a href="#tesis" class="nav-link text-gray-700">Tesis</a>
-                    <a href="#repositorios" class="nav-link text-primary font-bold"><i class="fa-brands fa-github mr-1"></i>Código</a>
+                    <a href="#carrera" class="nav-link text-gray-700">La Carrera</a>
+                    <a href="#repositorios" class="nav-link text-primary font-bold"><i
+                            class="fa-brands fa-github mr-1"></i>Código</a>
                 </div>
-                <!-- Menú Móvil (Botón) -->
-                <div class="md:hidden flex items-center">
+
+                <div class="md:hidden flex items-center ml-4">
                     <button id="mobile-menu-btn" class="text-gray-700 hover:text-primary focus:outline-none">
                         <i class="fa-solid fa-bars text-2xl"></i>
                     </button>
                 </div>
             </div>
         </div>
-        <!-- Menú Móvil (Desplegable) -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 pb-4">
-            <a href="#inicio" class="block px-4 py-2 text-gray-700 hover:bg-gray-50">Inicio</a>
-            <a href="#ensenanza" class="block px-4 py-2 text-gray-700 hover:bg-gray-50">Enseñanza</a>
-            <a href="#publicaciones" class="block px-4 py-2 text-gray-700 hover:bg-gray-50">Publicaciones</a>
-            <a href="#tesis" class="block px-4 py-2 text-gray-700 hover:bg-gray-50">Tesis</a>
-            <a href="#repositorios" class="block px-4 py-2 text-primary font-bold hover:bg-gray-50">Código</a>
-        </div>
-    </nav>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 pb-4 shadow-lg">
+        <a href="#inicio" class="block px-4 py-2 text-gray-700 hover:bg-gray-50">Inicio</a>
+        <a href="#ensenanza" class="block px-4 py-2 text-gray-700 hover:bg-gray-50">Enseñanza</a>
+        <a href="#publicaciones" class="block px-4 py-2 text-gray-700 hover:bg-gray-50">Publicaciones</a>
+        <a href="#tesis" class="block px-4 py-2 text-gray-700 hover:bg-gray-50">Tesis</a>
+        <a href="#carrera" class="block px-4 py-2 text-gray-700 hover:bg-gray-50">La Carrera</a>
+        <a href="#repositorios" class="block px-4 py-2 text-primary font-bold hover:bg-gray-50">Código</a>
+    </div>
+</nav>
 
     <!-- Sección Hero (Inicio) -->
     <section id="inicio" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
         <div class="md:w-1/3 flex justify-center">
-            <div class="w-64 h-64 rounded-full border-4 border-white shadow-xl overflow-hidden bg-gray-200 flex items-center justify-center relative">
-                <!-- Se recomienda cambiar este div por una etiqueta <img> real -->
-                <span class="text-gray-500 text-sm text-center px-4">[Imagen de Rodrigo Morales]</span>
+            <div class="w-64 h-64 rounded-full border-4 border-white shadow-xl overflow-hidden bg-gray-200">
+                <!-- Reemplaza 'tu-foto.jpg' por el nombre del archivo que subas a GitHub -->
+                <img src="fotoperfil.jpeg" alt="Msc. Rodrigo H. Morales M." class="w-full h-full object-cover">
             </div>
         </div>
         <div class="md:w-2/3 text-center md:text-left">
@@ -81,7 +93,7 @@
             </h1>
             <h2 class="text-2xl text-secondary font-medium mb-6">Docente e Investigador en Ingeniería Civil Eléctrica</h2>
             <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                Especialista en sistemas eléctricos, electrónica y control. Apasionado por la enseñanza universitaria y la investigación en energías renovables (paneles fotovoltaicos, algoritmos MPPT) e inteligencia computacional.
+                Especialista en sistemas eléctricos, electrónica y control. Apasionado por la enseñanza universitaria y la investigación en energías renovables (paneles fotovoltaicos, algoritmos MPPT).
             </p>
             <div class="flex flex-wrap justify-center md:justify-start gap-4">
                 <a href="#repositorios" class="bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition shadow-lg flex items-center gap-2">
@@ -92,6 +104,11 @@
                 </a>
                 <a href="https://www.instagram.com/ice_ulagos/" target="_blank" class="bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50 transition shadow flex items-center gap-2">
                     <i class="fa-brands fa-instagram text-pink-600"></i> @ice_ulagos
+                </a>
+
+                <a href="https://www.linkedin.com/in/rodrigo-morales-melo/" target="_blank" rel="noopener noreferrer"
+                    class="bg-[#0077b5] text-white px-6 py-3 rounded-lg hover:bg-[#005582] transition shadow-lg flex items-center gap-2">
+                    <i class="fa-brands fa-linkedin text-xl"></i> LinkedIn
                 </a>
             </div>
         </div>
@@ -167,11 +184,15 @@
                             <h3 class="font-bold text-xl text-gray-900">Universidad de los Lagos</h3>
                             <span class="text-sm font-semibold text-secondary">2024 - Presente</span>
                         </div>
-                        <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
+                        <ul class="list-disc list-inside text-gray-600 text-sm space-y-1 grid grid-cols-1 sm:grid-cols-2 gap-x-4">
                             <li>Teoría de Circuitos II</li>
                             <li>Análisis de Señales</li>
                             <li>Máquinas Eléctricas</li>
                             <li>Electrónica General</li>
+                            <li>Conversión Electromecánica de Energía</li>
+                            <li>Anteproyecto de Título</li>
+                            <li>Proyecto de Título</li>
+                            <li>Programación</li>
                         </ul>
                     </div>
                 </div>
@@ -222,55 +243,275 @@
     </section>
 
     <!-- Sección Publicaciones e Investigación -->
-    <section id="publicaciones" class="py-20 bg-slate-50 border-t border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Publicaciones Científicas</h2>
-            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Investigación enfocada en el control de conversores de potencia y algoritmos de optimización para energías renovables.</p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Articulo 1 -->
+<section id="publicaciones" class="py-20 bg-slate-50 border-t border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Publicaciones Científicas</h2>
+        <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto">Investigación enfocada en el control de conversores
+            de potencia y algoritmos de optimización para energías renovables.</p>
+
+        <div class="max-h-[500px] overflow-y-auto pr-2 sm:pr-4 pb-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
                     <div class="flex items-start gap-4">
-                        <div class="bg-blue-100 p-3 rounded-lg text-primary"><i class="fa-solid fa-file-lines text-xl"></i></div>
+                        <div class="bg-blue-100 p-3 rounded-lg text-primary shrink-0"><i
+                                class="fa-solid fa-file-lines text-xl"></i></div>
                         <div>
-                            <h4 class="font-bold text-gray-900 mb-2">Extended Operating Region Algorithm for PV Array Connected to Microgrids for Wide Frequency and Amplitude Variations</h4>
-                            <p class="text-sm text-gray-500 mb-3">Publicado en conferencias/revistas de Energía Eléctrica y Fotovoltaica.</p>
+                            <a href="https://www.mdpi.com/1996-1073/16/7/3157" target="_blank" rel="noopener noreferrer"
+                                class="group">
+                                <h4
+                                    class="font-bold text-gray-900 mb-2 group-hover:text-secondary transition-colors duration-200">
+                                    Extended Operating Region Algorithm for PV Array Connected to Microgrids for Wide
+                                    Frequency and Amplitude Variations
+                                </h4>
+                            </a>
+                            <p class="text-sm text-gray-500 mb-2"><strong>Publicado en:</strong> Energies - MDPI</p>
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="inline-block bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded font-semibold">2023</span>
+                                <a href="https://www.mdpi.com/1996-1073/16/7/3157" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="text-xs text-primary hover:text-secondary font-medium transition-colors">
+                                    Ver artículo <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- Articulo 2 -->
+
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
                     <div class="flex items-start gap-4">
-                        <div class="bg-blue-100 p-3 rounded-lg text-primary"><i class="fa-solid fa-file-lines text-xl"></i></div>
+                        <div class="bg-blue-100 p-3 rounded-lg text-primary shrink-0"><i
+                                class="fa-solid fa-file-lines text-xl"></i></div>
                         <div>
-                            <h4 class="font-bold text-gray-900 mb-2">A Novel Global Maximum Power Point Tracking Method Based on Measurement Cells</h4>
-                            <p class="text-sm text-gray-500 mb-3">Publicado en IEEE Access.</p>
+                            <a href="https://ieeexplore.ieee.org/abstract/document/9881500" target="_blank"
+                                rel="noopener noreferrer" class="group">
+                                <h4
+                                    class="font-bold text-gray-900 mb-2 group-hover:text-secondary transition-colors duration-200">
+                                    A Novel Global Maximum Power Point Tracking Method Based on Measurement Cells
+                                </h4>
+                            </a>
+                            <p class="text-sm text-gray-500 mb-2"><strong>Publicado en:</strong> IEEE Access</p>
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="inline-block bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded font-semibold">2022</span>
+                                <a href="https://ieeexplore.ieee.org/abstract/document/9881500" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="text-xs text-primary hover:text-secondary font-medium transition-colors">
+                                    Ver artículo <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- Articulo 3 -->
+
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
                     <div class="flex items-start gap-4">
-                        <div class="bg-blue-100 p-3 rounded-lg text-primary"><i class="fa-solid fa-file-lines text-xl"></i></div>
+                        <div class="bg-blue-100 p-3 rounded-lg text-primary shrink-0"><i
+                                class="fa-solid fa-file-lines text-xl"></i></div>
                         <div>
-                            <h4 class="font-bold text-gray-900 mb-2">PID Control Strategies Comparison with Gain Schedule and States Feedback in a Buck-Boost Converter</h4>
-                            <p class="text-sm text-gray-500 mb-3">Publicado en IEEE ICA ACCA 2018.</p>
+                            <a href="https://ieeexplore.ieee.org/abstract/document/9465199" target="_blank" rel="noopener noreferrer" class="group">
+                                <h4
+                                    class="font-bold text-gray-900 mb-2 group-hover:text-secondary transition-colors duration-200">
+                                    Operating Region for AFE Configuration under Variable Frequency Grid
+                                </h4>
+                            </a>
+                            <p class="text-sm text-gray-500 mb-2"><strong>Publicado en:</strong> IEEE ICA-ACCA</p>
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="inline-block bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded font-semibold">2021</span>
+                                <a href="https://ieeexplore.ieee.org/abstract/document/9465199" target="_blank" rel="noopener noreferrer"
+                                    class="text-xs text-primary hover:text-secondary font-medium transition-colors">
+                                    Ver artículo <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- Articulo 4 -->
+
                 <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
                     <div class="flex items-start gap-4">
-                        <div class="bg-blue-100 p-3 rounded-lg text-primary"><i class="fa-solid fa-file-lines text-xl"></i></div>
+                        <div class="bg-blue-100 p-3 rounded-lg text-primary shrink-0"><i
+                                class="fa-solid fa-file-lines text-xl"></i></div>
                         <div>
-                            <h4 class="font-bold text-gray-900 mb-2">Comparison between maximum power point tracking algorithms for dc-dc power converters</h4>
-                            <p class="text-sm text-gray-500 mb-3">Publicado en IEEE CHILECON 2017.</p>
+                            <a href="https://ieeexplore.ieee.org/abstract/document/9465277" target="_blank" rel="noopener noreferrer" class="group">
+                                <h4
+                                    class="font-bold text-gray-900 mb-2 group-hover:text-secondary transition-colors duration-200">
+                                    MPPT Algorithm for Photovoltaic Arrays Under Partial Shading Conditions
+                                </h4>
+                            </a>
+                            <p class="text-sm text-gray-500 mb-2"><strong>Publicado en:</strong> IEEE ICA-ACCA</p>
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="inline-block bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded font-semibold">2021</span>
+                                <a href="https://ieeexplore.ieee.org/abstract/document/9465277" target="_blank" rel="noopener noreferrer"
+                                    class="text-xs text-primary hover:text-secondary font-medium transition-colors">
+                                    Ver artículo <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-blue-100 p-3 rounded-lg text-primary shrink-0"><i
+                                class="fa-solid fa-file-lines text-xl"></i></div>
+                        <div>
+                            <a href="https://ieeexplore.ieee.org/abstract/document/8927843" target="_blank" rel="noopener noreferrer" class="group">
+                                <h4
+                                    class="font-bold text-gray-900 mb-2 group-hover:text-secondary transition-colors duration-200">
+                                    Grid Connected PV System with New MPPT Estimation Method Based on Measuring Cells
+                                </h4>
+                            </a>
+                            <p class="text-sm text-gray-500 mb-2"><strong>Publicado en:</strong> IEEE IECON</p>
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="inline-block bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded font-semibold">2019</span>
+                                <a href="https://ieeexplore.ieee.org/abstract/document/8927843" target="_blank" rel="noopener noreferrer"
+                                    class="text-xs text-primary hover:text-secondary font-medium transition-colors">
+                                    Ver artículo <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-blue-100 p-3 rounded-lg text-primary shrink-0"><i
+                                class="fa-solid fa-file-lines text-xl"></i></div>
+                        <div>
+                            <a href="https://ieeexplore.ieee.org/abstract/document/8988073" target="_blank" rel="noopener noreferrer" class="group">
+                                <h4
+                                    class="font-bold text-gray-900 mb-2 group-hover:text-secondary transition-colors duration-200">
+                                    Maximum Power Point Tracking Algorithms Comparison for Three-Phase Power Converter
+                                </h4>
+                            </a>
+                            <p class="text-sm text-gray-500 mb-2"><strong>Publicado en:</strong> IEEE CHILECON</p>
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="inline-block bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded font-semibold">2019</span>
+                                <a href="https://ieeexplore.ieee.org/abstract/document/8988073" target="_blank" rel="noopener noreferrer"
+                                    class="text-xs text-primary hover:text-secondary font-medium transition-colors">
+                                    Ver artículo <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-blue-100 p-3 rounded-lg text-primary shrink-0"><i
+                                class="fa-solid fa-file-lines text-xl"></i></div>
+                        <div>
+                            <a href="https://ieeexplore.ieee.org/abstract/document/8988090" target="_blank" rel="noopener noreferrer" class="group">
+                                <h4
+                                    class="font-bold text-gray-900 mb-2 group-hover:text-secondary transition-colors duration-200">
+                                    New Simplified Proposal for PV Cells Parameter Identification
+                                </h4>
+                            </a>
+                            <p class="text-sm text-gray-500 mb-2"><strong>Publicado en:</strong> IEEE CHILECON</p>
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="inline-block bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded font-semibold">2019</span>
+                                <a href="https://ieeexplore.ieee.org/abstract/document/8988090" target="_blank" rel="noopener noreferrer"
+                                    class="text-xs text-primary hover:text-secondary font-medium transition-colors">
+                                    Ver artículo <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-blue-100 p-3 rounded-lg text-primary shrink-0"><i
+                                class="fa-solid fa-file-lines text-xl"></i></div>
+                        <div>
+                            <a href="https://ieeexplore.ieee.org/abstract/document/8609739" target="_blank" rel="noopener noreferrer" class="group">
+                                <h4
+                                    class="font-bold text-gray-900 mb-2 group-hover:text-secondary transition-colors duration-200">
+                                    PID Control Strategies Comparison with Gain Schedule and States Feedback in a
+                                    Buck-Boost Converter
+                                </h4>
+                            </a>
+                            <p class="text-sm text-gray-500 mb-2"><strong>Publicado en:</strong> IEEE ICA-ACCA</p>
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="inline-block bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded font-semibold">2018</span>
+                                <a href="https://ieeexplore.ieee.org/abstract/document/8609739" target="_blank" rel="noopener noreferrer"
+                                    class="text-xs text-primary hover:text-secondary font-medium transition-colors">
+                                    Ver artículo <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-blue-100 p-3 rounded-lg text-primary shrink-0"><i
+                                class="fa-solid fa-file-lines text-xl"></i></div>
+                        <div>
+                            <a href="https://ieeexplore.ieee.org/abstract/document/8609793" target="_blank" rel="noopener noreferrer" class="group">
+                                <h4
+                                    class="font-bold text-gray-900 mb-2 group-hover:text-secondary transition-colors duration-200">
+                                    Implementation Study of Photovoltaic Generation in an Educational Institution
+                                </h4>
+                            </a>
+                            <p class="text-sm text-gray-500 mb-2"><strong>Publicado en:</strong> IEEE ICA-ACCA</p>
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="inline-block bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded font-semibold">2018</span>
+                                <a href="https://ieeexplore.ieee.org/abstract/document/8609793" target="_blank" rel="noopener noreferrer"
+                                    class="text-xs text-primary hover:text-secondary font-medium transition-colors">
+                                    Ver artículo <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="flex items-start gap-4">
+                        <div class="bg-blue-100 p-3 rounded-lg text-primary shrink-0"><i
+                                class="fa-solid fa-file-lines text-xl"></i></div>
+                        <div>
+                            <a href="https://ieeexplore.ieee.org/abstract/document/8229543" target="_blank" rel="noopener noreferrer" class="group">
+                                <h4
+                                    class="font-bold text-gray-900 mb-2 group-hover:text-secondary transition-colors duration-200">
+                                    Comparison between maximum power point tracking algorithms for dc/dc power
+                                    converters
+                                </h4>
+                            </a>
+                            <p class="text-sm text-gray-500 mb-2"><strong>Publicado en:</strong> IEEE CHILECON</p>
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="inline-block bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded font-semibold">2017</span>
+                                <a href="https://ieeexplore.ieee.org/abstract/document/8229543" target="_blank" rel="noopener noreferrer"
+                                    class="text-xs text-primary hover:text-secondary font-medium transition-colors">
+                                    Ver artículo <i class="fa-solid fa-arrow-up-right-from-square ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
-    </section>
+
+        <div class="mt-8 text-center">
+            <a href="https://scholar.google.com/citations?user=OGnByuEAAAAJ&hl=es&authuser=1" target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center bg-white border-2 border-primary text-primary font-bold px-8 py-3 rounded-lg hover:bg-primary hover:text-white transition-colors duration-300 shadow-sm">
+                <i class="fa-brands fa-google mr-2"></i> Ver perfil completo en Google Scholar
+            </a>
+        </div>
+
+    </div>
+</section>
 
     <!-- Sección Tesis y Premios -->
     <section id="tesis" class="py-20 bg-white">
@@ -280,36 +521,126 @@
             <div>
                 <h2 class="text-3xl font-bold text-gray-900 mb-8"><i class="fa-solid fa-graduation-cap text-secondary mr-3"></i>Trabajos de Tesis</h2>
                 
-                <h3 class="font-bold text-xl text-primary border-b pb-2 mb-4">Mis Tesis</h3>
-                <div class="space-y-4 mb-8">
-                    <div class="bg-gray-50 p-4 rounded-lg border border-gray-100">
-                        <span class="text-xs font-bold text-gray-500 uppercase tracking-wider">Tesis Magíster (U. de Talca)</span>
-                        <p class="font-medium text-gray-800 mt-1">"Método para el seguimiento del punto global de máxima potencia basado en celdas de medición"</p>
-                    </div>
-                    <div class="bg-gray-50 p-4 rounded-lg border border-gray-100">
-                        <span class="text-xs font-bold text-gray-500 uppercase tracking-wider">Tesis Pregrado (UBB)</span>
-                        <p class="font-medium text-gray-800 mt-1">"Estudio de implementación de paneles fotovoltaicos aplicando algoritmos de control de máxima extracción de potencia en la UBB"</p>
-                    </div>
-                </div>
+<h3 class="font-bold text-xl text-primary border-b pb-2 mb-4">Mis Tesis</h3>
+<div class="space-y-4 mb-8">
 
-                <h3 class="font-bold text-xl text-primary border-b pb-2 mb-4">Alumnos Tesistas Guiados</h3>
-                <ul class="space-y-3">
-                    <li class="flex items-start gap-3 text-gray-700">
-                        <i class="fa-solid fa-check-circle text-green-500 mt-1"></i>
-                        <div>
-                            <strong>Benjamín Cruz (2025-1)</strong><br>
-                            <span class="text-sm">"Estudio del consumo eléctrico en la U. de los Lagos, Campus Puerto Montt, para diseñar un sistema fotovoltaico".</span>
-                        </div>
-                    </li>
-                    <li class="flex items-start gap-3 text-gray-700">
-                        <i class="fa-solid fa-check-circle text-green-500 mt-1"></i>
-                        <div>
-                            <strong>Gabriel Cuellar</strong><br>
-                            <span class="text-sm">"Automatización del Control de Nivel..."</span>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+    <div
+        class="bg-gray-50 p-4 rounded-lg border border-gray-100 flex flex-col sm:flex-row items-start gap-4 hover:shadow-md transition">
+        <a href="https://drive.google.com/file/d/1XKm3gO1-AEhl_p9XuqHr9ReW68Bpp7HU/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+            class="shrink-0 mx-auto sm:mx-0">
+            <img src="portada-magister.png" alt="Portada Tesis Magíster"
+                class="w-24 h-32 object-cover rounded border border-gray-300 shadow-sm hover:opacity-80 transition">
+        </a>
+
+        <div class="flex-1 text-center sm:text-left">
+            <span class="text-xs font-bold text-gray-500 uppercase tracking-wider">Tesis Magíster (U. de Talca)</span>
+            <a href="https://drive.google.com/file/d/1XKm3gO1-AEhl_p9XuqHr9ReW68Bpp7HU/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="group block mt-1">
+                <p class="font-medium text-gray-800 group-hover:text-secondary transition-colors duration-200">
+                    "Método para el seguimiento del punto global de máxima potencia basado en celdas de medición"
+                </p>
+            </a>
+            <a href="https://drive.google.com/file/d/1XKm3gO1-AEhl_p9XuqHr9ReW68Bpp7HU/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 mt-3 text-sm text-primary font-bold hover:text-secondary transition-colors">
+                <i class="fa-solid fa-file-pdf"></i> Ver Documento
+            </a>
+        </div>
+    </div>
+
+    <div
+        class="bg-gray-50 p-4 rounded-lg border border-gray-100 flex flex-col sm:flex-row items-start gap-4 hover:shadow-md transition">
+        <a href="https://drive.google.com/file/d/1XJZjSEWTjnHWOWMe4U3-AqjnwzWma0uy/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+            class="shrink-0 mx-auto sm:mx-0">
+            <img src="portada-pregrado.png" alt="Portada Tesis Pregrado"
+                class="w-24 h-32 object-cover rounded border border-gray-300 shadow-sm hover:opacity-80 transition">
+        </a>
+
+        <div class="flex-1 text-center sm:text-left">
+            <span class="text-xs font-bold text-gray-500 uppercase tracking-wider">Tesis Pregrado (UBB)</span>
+            <a href="https://drive.google.com/file/d/1XJZjSEWTjnHWOWMe4U3-AqjnwzWma0uy/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="group block mt-1">
+                <p class="font-medium text-gray-800 group-hover:text-secondary transition-colors duration-200">
+                    "Estudio de implementación de paneles fotovoltaicos aplicando algoritmos de control de máxima
+                    extracción de potencia en la Universidad del Bío-Bío, Sede Concepción"
+                </p>
+            </a>
+            <a href="https://drive.google.com/file/d/1XJZjSEWTjnHWOWMe4U3-AqjnwzWma0uy/view?usp=sharing" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 mt-3 text-sm text-primary font-bold hover:text-secondary transition-colors">
+                <i class="fa-solid fa-file-pdf"></i> Ver Documento
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<h3 class="font-bold text-xl text-primary border-b pb-2 mb-4">Alumnos Tesistas Guiados</h3>
+
+<h4 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-3">Finalizadas</h4>
+<ul class="space-y-4 mb-6">
+    <li class="flex items-start gap-3 text-gray-700">
+        <i class="fa-solid fa-circle-check text-green-500 mt-1"></i>
+        <div>
+            <strong>Benjamín Cruz</strong><br>
+            <span class="text-sm">"Estudio del consumo eléctrico en la Universidad de los Lagos, Campus Puerto Montt,
+                dependencias Chinquihue, para diseñar un sistema fotovoltaico."</span>
+        </div>
+    </li>
+    <li class="flex items-start gap-3 text-gray-700">
+        <i class="fa-solid fa-circle-check text-green-500 mt-1"></i>
+        <div>
+            <strong>Gabriel Cuellar</strong><br>
+            <span class="text-sm">"Automatización del control de nivel de estanque con sistema de telemetría orientado
+                al funcionamiento de un SSR."</span>
+        </div>
+    </li>
+    <li class="flex items-start gap-3 text-gray-700">
+        <i class="fa-solid fa-circle-check text-green-500 mt-1"></i>
+        <div>
+            <strong>Hugo Elgueta</strong><br>
+            <span class="text-sm">"Sistema integrado de energía para laboratorio de procesos industriales de la
+                Universidad de Los Lagos."</span>
+        </div>
+    </li>
+    <li class="flex items-start gap-3 text-gray-700">
+        <i class="fa-solid fa-circle-check text-green-500 mt-1"></i>
+        <div>
+            <strong>Marcelo Garcia</strong><br>
+            <span class="text-sm">"Diseño de sistemas eléctricos y de corrientes débiles mediante BIM: estudio de caso
+                en un local comercial."</span>
+        </div>
+    </li>
+</ul>
+
+<h4 class="text-sm font-bold text-gray-400 uppercase tracking-widest mb-3">En Proceso</h4>
+<ul class="space-y-4">
+    <li class="flex items-start gap-3 text-gray-700">
+        <i class="fa-solid fa-clock-rotate-left text-amber-500 mt-1"></i>
+        <div>
+            <strong>Matias Marzan</strong><br>
+            <span class="text-sm italic">"Análisis del Impacto de Carga de un Sistema Aislado."</span>
+        </div>
+    </li>
+    <li class="flex items-start gap-3 text-gray-700">
+        <i class="fa-solid fa-clock-rotate-left text-amber-500 mt-1"></i>
+        <div>
+            <strong>Boris Nahuelhueique</strong><br>
+            <span class="text-sm italic">"Diseño de una Aplicación en MATLAB para Dimensionamiento de Sistemas
+                Fotovoltaicos."</span>
+        </div>
+    </li>
+    <li class="flex items-start gap-3 text-gray-700">
+        <i class="fa-solid fa-clock-rotate-left text-amber-500 mt-1"></i>
+        <div>
+            <strong>Diego Oyarzo</strong><br>
+            <span class="text-sm italic">"Diseño Convertidor DC/DC."</span>
+        </div>
+    </li>
+    <li class="flex items-start gap-3 text-gray-700">
+        <i class="fa-solid fa-clock-rotate-left text-amber-500 mt-1"></i>
+        <div>
+            <strong>Joaquín Tropa</strong><br>
+            <span class="text-sm italic">"Diseño Convertidor DC/AC."</span>
+        </div>
+    </li>
+</ul>
 
             <!-- Columna Reconocimientos -->
             <div>
@@ -344,6 +675,23 @@
 
         </div>
     </section>
+            <section id="carrera" class="py-16 bg-blue-50 border-t border-blue-100">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h2 class="text-3xl font-bold text-primary mb-4">
+                        <i class="fa-solid fa-bolt text-accent mr-3"></i>Estudia Ingeniería Civil Eléctrica
+                    </h2>
+                    <p class="text-lg text-gray-700 mb-8">
+                        ¿Te apasionan las energías renovables, los sistemas eléctricos y la automatización? Descubre todo lo que
+                        necesitas saber sobre la carrera en la <strong>Universidad de Los Lagos (Sede Puerto Montt)</strong> y
+                        conviértete en un profesional que impulse el desarrollo tecnológico del país.
+                    </p>
+                    <a href="https://admision.ulagos.cl/Carreras/ingenieria-civil-electrica/" target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 bg-secondary text-white font-bold px-8 py-4 rounded-full hover:bg-primary transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        Ver Información de Admisión <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </section>
 
     <!-- Footer / Contacto -->
     <footer class="bg-gray-900 text-gray-300 py-12 border-t border-gray-800">
@@ -366,7 +714,7 @@
                     <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition text-white">
                         <i class="fa-brands fa-github"></i>
                     </a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition text-white">
+                    <a href="https://www.linkedin.com/in/rodrigo-morales-melo/" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-600 transition text-white">
                         <i class="fa-brands fa-linkedin-in"></i>
                     </a>
                     <a href="https://www.instagram.com/ice_ulagos/" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition text-white">
@@ -378,24 +726,95 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-8 border-t border-gray-800 text-sm text-center text-gray-500">
             &copy; <script>document.write(new Date().getFullYear())</script> Rodrigo H. Morales M. | Desarrollado con HTML, Tailwind CSS y alojado en GitHub Pages.
         </div>
+
+
     </footer>
 
-    <!-- Script para menú móvil -->
-    <script>
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
+<script>
+    // ==========================================
+    // 1. LÓGICA DEL MENÚ MÓVIL
+    // ==========================================
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
 
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
 
-        // Cerrar menú al hacer clic en un enlace (móvil)
-        const mobileLinks = menu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
-            });
+    // Cerrar menú al hacer clic en un enlace (móvil)
+    const mobileLinks = menu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            menu.classList.add('hidden');
         });
-    </script>
+    });
+
+    // ==========================================
+    // 2. LÓGICA DEL OBSERVADOR DE SECCIÓN (ScrollSpy)
+    // ==========================================
+    const sectionNames = {
+        'inicio': 'Inicio',
+        'repositorios': 'Código y Recursos',
+        'ensenanza': 'Docencia',
+        'publicaciones': 'Investigación',
+        'tesis': 'Tesis y Premios',
+        'carrera': 'ICE-ULAGOS'
+    };
+
+    const sectionTitle = document.getElementById('active-section-name');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    // Configuración de cuándo se detecta el cambio de sección
+    const observerOptions = {
+        root: null,
+        rootMargin: '-20% 0px -70% 0px',
+        threshold: 0
+    };
+
+    const observerCallback = (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.id;
+
+                // A) Actualizar el texto central con animación
+                if (sectionNames[id]) {
+                    // 1. Ocultar suavemente
+                    sectionTitle.classList.remove('opacity-100');
+                    sectionTitle.classList.add('opacity-0', 'translate-y-2');
+
+                    // 2. Cambiar texto y mostrar
+                    setTimeout(() => {
+                        sectionTitle.innerText = sectionNames[id];
+                        sectionTitle.classList.remove('opacity-0', 'translate-y-2');
+                        sectionTitle.classList.add('opacity-100');
+                    }, 150);
+                }
+
+                // B) Resaltar visualmente el link en el menú de escritorio
+                navLinks.forEach(link => {
+                    if (link.getAttribute('href') === `#${id}`) {
+                        // Link activo
+                        link.classList.add('text-secondary', 'font-bold');
+                        link.classList.remove('text-gray-700');
+                    } else {
+                        // Link inactivo (dejamos fuera el botón de código porque tiene su propio color)
+                        if (!link.href.includes('repositorios')) {
+                            link.classList.remove('text-secondary', 'font-bold');
+                            link.classList.add('text-gray-700');
+                        }
+                    }
+                });
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    // Iniciar la observación de todas las secciones
+    document.querySelectorAll('section[id]').forEach(section => {
+        observer.observe(section);
+    });
+</script>
 </body>
+
 </html>
